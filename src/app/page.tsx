@@ -1,7 +1,11 @@
-import Header from '@/header/Header'
+import SectionOne from "@/body/SectionOne";
+import Header from "@/header/Header";
 
 export default function Home() {
   return (
- <Header title={'Logo'}/>
-  )
+    <>
+      <Header title={"Bit.Catcher"} />
+      <SectionOne />
+    </>
+  );
 }

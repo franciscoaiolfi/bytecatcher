@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import '../../../styles/styles.css';
 import SubmenuItems from './SubMenuItems';
 
 
-interface MenuItemProps {
-  text: string;
-  url: string;
-  subItems?: string[];
+interface SubmenuItemsWrapperProps {
+  subItems: string[];
 }
 
-const MenuItemsHeader: React.FC<MenuItemProps> = ({ text, url, subItems }) => {
+const SubmenuItemsWrapper: React.FC<SubmenuItemsWrapperProps> = ({ subItems }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,18 +19,14 @@ const MenuItemsHeader: React.FC<MenuItemProps> = ({ text, url, subItems }) => {
 
   return (
     <div
-      className="MenuItem"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <a className='header__menu-item-style' href={url}>{text}</a>
       {isHovered && subItems && subItems.length > 0 && (
-        <div className="SubmenuContainer">
-          <SubmenuItems subItems={subItems} />
-        </div>
+        <SubmenuItems subItems={subItems} />
       )}
     </div>
   );
 };
 
-export default MenuItemsHeader;
+export default SubmenuItemsWrapper;

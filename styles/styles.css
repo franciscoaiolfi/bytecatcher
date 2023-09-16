@@ -1,42 +1,140 @@
 body {
-    background-color: rgb(31, 34, 53);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  background-color: rgb(31, 34, 53);
+  margin: 0;
+}
 
-
-
-  /* HEADER */
-.header__header-grid{
-  max-width: 1252px;
-  width: 100%;
-  padding: 0 16px;
+.container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.header__header-wrapper{
+/* HEADER */
+.header__header-grid {
+  max-width: 1366px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__header-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.headerStyles{
+.headerStyles {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
+.header__nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+/* Nav Items */
+.MenuItem {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+  position: relative;
+}
+
+.MenuItem:hover {
+  color: #ff4a57;
+  cursor: pointer;
+}
+.SubmenuContainer {
+  position: absolute;
+  left: 0;
+  border-radius: 6px;
+  background: rgb(35, 38, 58);
+  z-index: 1000;
+  border-radius: 6px;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* SubItem - Menu */
+
+.header__sub-menu-item-li {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 500;
+  position: relative;
+  list-style-type: none;
+}
+
+.header__sub-menu-item-li {
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.header__sub-menu-item-li:hover {
+  background-color: #ff4a57;
+}
+
+.SubMenuItems {
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+}
+
+.header__menu-item-style {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Anton";
+  font-weight: 500;
+  list-style-type: none;
+}
+.header__logo-content {
+  display: flex;
+}
+
+/* HEADER TITLE LOGO */
+.header__title-logo {
+  font-size: 36px;
+  color: white;
+  font-family: "Anton";
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+/* BODY - SECTION */
+
+.body__section-container {
+  min-height: 732px;
+  background-color: #2c2c43;
+}
 
 
-  .header__nav-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-  }
+
+.header__menu-item-style::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
