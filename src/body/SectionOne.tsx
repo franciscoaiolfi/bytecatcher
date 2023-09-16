@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/styles.css";
 import Image from "next/image";
+import CepForm from "@/via-cep/CepForm";
 
 const SectionOne: React.FC = () => {
   return (
@@ -36,8 +37,13 @@ const SectionOne: React.FC = () => {
           />
           </div>
         </section>
+    
+      </div>
+      <div>
+      <CepForm />
       </div>
     </section>
+    
   );
 };
 
