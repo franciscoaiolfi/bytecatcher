@@ -32,3 +32,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+## Erros encontados: 
+
+# 1 - JSX element class does not support attributes because it does not have a 'props' property.
+
+-  O erro que você está enfrentando com o componente Image do Next.js ocorre porque o componente Image espera que as props, como src, width, height, e outras, sejam passadas diretamente para ele. Em componentes de classe, você pode usar this.props para acessar as props, mas em componentes funcionais, você deve recebê-las como argumentos da função.
+-   Nesse caso era só relizar o import que identificava as props como argumentos. 
+
+
+
+## Referencias utilizadas:
+
+ - https://undraw.co/illustrations
+ - https://icons8.com/

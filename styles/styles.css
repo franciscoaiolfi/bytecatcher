@@ -168,9 +168,7 @@ h1,h2{
   font-weight: bold;
   position: relative;
   font-size: 16px;
-  top: -10px;
   color: #fff;
-  left: 10px;
 }
 
 .contact-form input{
@@ -181,4 +179,33 @@ h1,h2{
     padding: 20px 35px;
     margin-bottom: 20px;
     border-radius: 6px;
+}
+
+
+
+/* -------- FOOTER ------- */
+
+.footer-wrapper{
+  max-width: 1252px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+}
+.footer-top-row{
+  display: flex;
+  justify-content: space-around;
+}
+.footer-social-media-nav{
+  display: flex;
+  gap: 8px;
+}
+
+
+
+/* DESKTOP CONFIGS */
+
+@media(min-width:1024px){
+.footer-wrapper{
+  padding: 0;
+}
 }

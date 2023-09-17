@@ -1,4 +1,5 @@
 import SectionOne from "@/body/SectionOne";
+import FooterComponent from "@/footer/FooterComponent";
 import Header from "@/header/Header";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Header title={"Bit.Catcher"} />
       <SectionOne />
+      <FooterComponent/>
     </>
   );
 }
