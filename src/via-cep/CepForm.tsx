@@ -1,15 +1,17 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+"use client";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../../styles/styles.css";
 
 export default function CepForm() {
-  const [cep, setCep] = useState('');
+  const [cep, setCep] = useState("");
   const [endereco, setEndereco] = useState({
-    rua: '',
-    bairro: '',
-    cidade: '',
-    estado: '',
-    ibge: '',
+    rua: "",
+    bairro: "",
+    cidade: "",
+    estado: "",
+    ibge: "",
+    numero: "",
   });
 
   const handleCepChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +24,7 @@ export default function CepForm() {
   };
 
   const pesquisarCEP = async (valor: string) => {
-    const cepLimpo = valor.replace(/\D/g, '');
+    const cepLimpo = valor.replace(/\D/g, "");
 
     if (cepLimpo.length === 8) {
       try {
@@ -38,14 +40,15 @@ export default function CepForm() {
             cidade: data.localidade,
             estado: data.uf,
             ibge: data.ibge,
+            numero: data.numero,
           });
         } else {
           limparEndereco();
-          alert('CEP não encontrado.');
+          alert("CEP não encontrado.");
         }
       } catch (err) {
         limparEndereco();
-        alert('Ocorreu um erro ao buscar o CEP.');
+        alert("Ocorreu um erro ao buscar o CEP.");
       }
     } else {
       limparEndereco();
@@ -54,11 +57,12 @@ export default function CepForm() {
 
   const limparEndereco = () => {
     setEndereco({
-      rua: '',
-      bairro: '',
-      cidade: '',
-      estado: '',
-      ibge: '',
+      rua: "",
+      bairro: "",
+      cidade: "",
+      estado: "",
+      ibge: "",
+      numero: "",
     });
   };
 
@@ -68,52 +72,60 @@ export default function CepForm() {
   };
 
   return (
-    <div>
-      <h2>Buscar Endereço por CEP</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Digite o CEP"
-          value={cep}
-          onChange={handleCepChange}
-        />
-        <button type="submit">Buscar</button>
-      </form>
-      <label>Rua:</label>
-      <input
-        type="text"
-        name="rua"
-        value={endereco.rua}
-        onChange={handleInputChange}
-      />
-      <label>Bairro:</label>
-      <input
-        type="text"
-        name="bairro"
-        value={endereco.bairro}
-        onChange={handleInputChange}
-      />
-      <label>Cidade:</label>
-      <input
-        type="text"
-        name="cidade"
-        value={endereco.cidade}
-        onChange={handleInputChange}
-      />
-      <label>Estado:</label>
-      <input
-        type="text"
-        name="estado"
-        value={endereco.estado}
-        onChange={handleInputChange}
-      />
-      <label>IBGE:</label>
-      <input
-        type="text"
-        name="ibge"
-        value={endereco.ibge}
-        onChange={handleInputChange}
-      />
+    <div className="contact-wrapper">
+      <div className="contact-title-wrapper">
+        <h2>Contact Me</h2>
+      </div>
+      <div className="contat-form-wrapper">
+        <form onSubmit={handleSubmit} className="contact-form">
+          <label htmlFor="">
+            Cep
+            <input
+              type="text"
+              placeholder="Digite o CEP"
+              value={cep}
+              onChange={handleCepChange}
+            />
+               <button type="submit">Buscar</button>
+          </label>
+          <label>Rua:</label>
+          <input
+            type="text"
+            name="rua"
+            value={endereco.rua}
+            onChange={handleInputChange}
+          />
+          <label>Bairro:</label>
+          <input
+            type="text"
+            name="bairro"
+            value={endereco.bairro}
+            onChange={handleInputChange}
+          />
+          <label>Cidade:</label>
+          <input
+            type="text"
+            name="cidade"
+            value={endereco.cidade}
+            onChange={handleInputChange}
+          />
+          <label>Estado:</label>
+          <input
+            type="text"
+            name="estado"
+            value={endereco.estado}
+            onChange={handleInputChange}
+          />
+          <label>Número:</label>
+          <input
+            type="text"
+            name=""
+            value={endereco.numero}
+            onChange={handleInputChange}
+          />
+       
+        </form>
+      </div>
     </div>
   );
 }

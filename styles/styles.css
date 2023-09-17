@@ -2,7 +2,9 @@ body {
   background-color: rgb(31, 34, 53);
   margin: 0;
 }
-
+h1,h2{
+  color: white;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -137,4 +139,46 @@ body {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
+}
+
+
+
+
+/* CONTACT ME */
+.contact-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.contat-form-wrapper form{
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  min-width: 500px;
+  align-items: center;
+  width: 100%;
+}
+.contact-form{
+
+}
+.contact-form label,h2{
+  font-weight: bold;
+  position: relative;
+  font-size: 16px;
+  top: -10px;
+  color: #fff;
+  left: 10px;
+}
+
+.contact-form input{
+  border: none;
+    width: 100%;
+    background: #23263A;
+    color: #fff;
+    padding: 20px 35px;
+    margin-bottom: 20px;
+    border-radius: 6px;
 }
