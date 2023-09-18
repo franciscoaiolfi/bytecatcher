@@ -214,6 +214,18 @@ footer{
 
 
 
+/* ITENS INSIDE GEOLOCATION */
+.geoLocation-wrapper p{
+  color: white;
+}
+.icon-geolocation-wrapper{
+  position: absolute;
+  width: 100px;
+  height: auto;
+  bottom: 0;
+  right: 0;
+}
+
 /* DESKTOP CONFIGS */
 
 @media(min-width:1024px){

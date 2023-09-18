@@ -44,6 +44,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 
+
+
+
+
+
+
+## Criando efeito de legand no geolocation itens
+ - 
+
 ## Referencias utilizadas:
 
  - https://undraw.co/illustrations

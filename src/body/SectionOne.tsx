@@ -4,6 +4,7 @@ import "../../styles/styles.css";
 import Image from "next/image";
 import CepForm from "@/via-cep/CepForm";
 import GeoLocationComponent from "@/ip-geolocation/GeoLocationComponent";
+import IconClick from "@/ip-geolocation/iconClick";
 
 const SectionOne: React.FC = () => {
   const [clientIp, setClientIp] = useState<string | null>(null);
@@ -67,6 +68,7 @@ const SectionOne: React.FC = () => {
       <div>
         {clientIp && <GeoLocationComponent clientIp={clientIp} />}
       </div>
+      <IconClick/>
     </section>
   );
 };
