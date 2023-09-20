@@ -5,6 +5,7 @@ import Image from "next/image";
 import CepForm from "@/via-cep/CepForm";
 import GeoLocationComponent from "@/ip-geolocation/GeoLocationComponent";
 import IconClick from "@/ip-geolocation/iconClick";
+import ImageConverter from "@/ImageConverter/ImageConverter";
 
 const SectionOne: React.FC = () => {
   const [clientIp, setClientIp] = useState<string | null>(null);
@@ -69,6 +70,9 @@ const SectionOne: React.FC = () => {
         {clientIp && <GeoLocationComponent clientIp={clientIp} />}
       </div>
       <IconClick/>
+      <div>
+        <ImageConverter/>
+      </div>
     </section>
   );
 };
